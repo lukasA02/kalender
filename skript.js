@@ -4,7 +4,7 @@ $("button").click(function() {
         // data: { aid: 1, hash: 123456789 },  // data to submit
         dataType: 'JSON',
         success: function (data) {
-            alert("VARNING VARNING");
+            alert(data);
             $('p').append('data: ' + data);
         },
         error: function (errorMessage) {
