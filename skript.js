@@ -1,13 +1,19 @@
 $("button").click(function() {
-    $.ajax('https://tp2021.ntigskovde.se/Theprovider-main/minkalender.php', {
+    $.ajax('minkalender.php', {
         type: 'GET',  // http method
-        data: { aid: 1, hash: 123456789 },  // data to submit
-        dataType: 'json',
-        success: function (data, status) {
-            $('p').append('status: ' + status + ', data: ' + data);
+        // data: { aid: 1, hash: 123456789 },  // data to submit
+        dataType: 'JSON',
+        success: function (data) {
+            alert("VARNING VARNING");
+            $('p').append('data: ' + data);
         },
         error: function (errorMessage) {
-                $('p').append('Error' + errorMessage);
+            $('p').append('Error' + JSON.stringify(errorMessage));
         }
     });
+    // $.ajax({
+    //     url: "minkalender.php",
+    //   }).done(function() {
+    //     $('p').innerHTML(document.body);
+    //   });
 });
