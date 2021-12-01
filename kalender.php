@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<?php
+  session_start();
+  echo $_SESSION["aid"]. "<br>";
+  echo $_SESSION["hash"]. "<br>";
+  ?>
 <button id="tryck">😈😈😈</button>
+
 <p></p>
 <div class="month">      
   <ul>
@@ -62,7 +68,10 @@
   <li>28</li>
   <li>29</li>
   <li>30</li>
+  <li>31</li>
 </ul>
+
+
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
