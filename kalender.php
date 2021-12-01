@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<?php
+  session_start();
+  echo $_SESSION["aid"]. "<br>";
+  echo $_SESSION["hash"]. "<br>";
+  ?>
 <button id="tryck">😈😈😈</button>
+
 <p></p>
 <div class="month">      
   <ul>
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li>
-      November<br>
+      August<br>
       <span style="font-size:18px">2021</span>
     </li>
   </ul>
@@ -32,7 +38,7 @@
 </ul>
 
 <ul class="days">  
-  <li id="ett">1</li>
+  <li>1</li>
   <li>2</li>
   <li>3</li>
   <li>4</li>
@@ -62,7 +68,10 @@
   <li>28</li>
   <li>29</li>
   <li>30</li>
+  <li>31</li>
 </ul>
+
+
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
