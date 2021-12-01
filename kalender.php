@@ -21,7 +21,7 @@
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li>
-      August<br>
+      November<br>
       <span style="font-size:18px">2021</span>
     </li>
   </ul>
@@ -38,7 +38,7 @@
 </ul>
 
 <ul class="days">  
-  <li>1</li>
+  <li id="ett">1</li>
   <li>2</li>
   <li>3</li>
   <li>4</li>
