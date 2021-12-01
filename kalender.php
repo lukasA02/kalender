@@ -15,7 +15,7 @@
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li>
-      August<br>
+      November<br>
       <span style="font-size:18px">2021</span>
     </li>
   </ul>
@@ -32,7 +32,7 @@
 </ul>
 
 <ul class="days">  
-  <li>1</li>
+  <li id="ett">1</li>
   <li>2</li>
   <li>3</li>
   <li>4</li>
@@ -62,7 +62,6 @@
   <li>28</li>
   <li>29</li>
   <li>30</li>
-  <li>31</li>
 </ul>
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
