@@ -12,16 +12,17 @@
   session_start();
   echo $_SESSION["aid"]. "<br>";
   echo $_SESSION["hash"]. "<br>";
-  ?>
+?>
 <button id="tryck">😈😈😈</button>
 
 <p></p>
+<div id="kalender">
 <div class="month">      
   <ul>
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li>
-      November<br>
+      December<br>
       <span style="font-size:18px">2021</span>
     </li>
   </ul>
@@ -37,9 +38,9 @@
   <li>Su</li>
 </ul>
 
-<ul class="days">  
+<ul class="days">
   <li id="ett">1</li>
-  <li>2</li>
+  <li><span class="current">2</span></li>
   <li>3</li>
   <li>4</li>
   <li>5</li>
@@ -47,7 +48,7 @@
   <li>7</li>
   <li>8</li>
   <li>9</li>
-  <li><span class="active">10</span></li>
+  <li>10</li>
   <li>11</li>
   <li>12</li>
   <li>13</li>
@@ -70,7 +71,12 @@
   <li>30</li>
   <li>31</li>
 </ul>
+</div>
 
+<div class="event">
+  <span onclick="stangFonster();">❌</span>
+  <div id="data"></div>
+</div>
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
