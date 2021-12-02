@@ -1,11 +1,14 @@
+var dagar = Array();
+
 $("button").click(function() {
-    $.ajax('minkalender.php', {
+    // hämta alla events som admin
+    $.ajax('https://tp2021.ntigskovde.se/Theprovider-main/minkalender.php', {
         type: 'GET',  // http method
-        // data: { aid: 1, hash: 123456789 },  // data to submit
+        data: { aid: 1, hash: 436803698 },
         dataType: 'json',
         success: function (data) {
-            var dagar = Array();
-
+            
+            // skriver ut alla events i <p> och lägger bokade starttider i en array
             for(let i = 0; i < data.length; i++) {
                 $('p').append(data[i].ID);
                 $('p').append(data[i].Namn);
@@ -20,12 +23,26 @@ $("button").click(function() {
             
             var datum = new Date(data[0].Starttid);
             console.log(datum.getUTCDate());
-            var bruh = "<span class='active'>" + $("#ett").html() + "</span>";
-            $("#ett").html(bruh);
+
             console.log(dagar);
+            kalender();
         },
         error: function (errorMessage) {
             $('p').append('Error' + JSON.stringify(errorMessage));
         }
     });
 });
+
+// fyller i dagarna från starttid
+function kalender() {
+    var listItems = $(".days li");
+    listItems.each(function(idx, li) {
+        var product = $(li);
+        // loopar igenom alla dagar från dagar-arrayen
+        for(let i = 0; i < dagar.length; i++) {
+            // kollar ifall innehållet av <li> överensstämmer med dagarna i dagar-arrayen
+            if(dagar[i] == $(li).html())
+                $(li).html("<span class='active'>" + $(li).html() + "</span>");
+        }
+    });
+}

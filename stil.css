@@ -68,6 +68,12 @@ body {font-family: Verdana, sans-serif;}
   color: white !important;
 }
 
+.days li .current {
+  padding: 5px;
+  background: #4b72f3;
+  color: white !important;
+}
+
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
