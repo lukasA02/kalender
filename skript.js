@@ -59,12 +59,12 @@ function oppnaDag(val) {
         // lägger in allt i div med id: data
         if(val == dg) { // jämför datumet man klickar på med datumet från minkalender.php 
             $('.event #data').html(ajax[0][i]);
-            $('.event #data').append(ajax[0][i].ID + '<br>');
-            $('.event #data').append(ajax[0][i].Namn + '<br>');
-            $('.event #data').append(ajax[0][i].beskrivning + '<br>');
-            $('.event #data').append(ajax[0][i].Agare + '<br>');
-            $('.event #data').append(ajax[0][i].Starttid + '<br>');
-            $('.event #data').append(ajax[0][i].Sluttid + '<br>');
+            $('.event #data').append("ID: " + ajax[0][i].ID + '<br>');
+            $('.event #data').append("Namn: " + ajax[0][i].Namn + '<br>');
+            $('.event #data').append("Beskrivning: " + ajax[0][i].beskrivning + '<br>');
+            $('.event #data').append("Ägare: " + ajax[0][i].Agare + '<br>');
+            $('.event #data').append("Starttid: " + ajax[0][i].Starttid + '<br>');
+            $('.event #data').append("Sluttid: " + ajax[0][i].Sluttid + '<br>');
         }
     }
 }
