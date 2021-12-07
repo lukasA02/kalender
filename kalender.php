@@ -7,40 +7,36 @@
     <title>Kalender</title>
     <link rel="stylesheet" href="stil.css">
 </head>
-<body>
-<?php
-  session_start();
-  echo $_SESSION["aid"]. "<br>";
-  echo $_SESSION["hash"]. "<br>";
-?>
-<button id="tryck">😈😈😈</button>
+<body onload="hamtaEvents();">
 
 <p></p>
 <div id="kalender">
 <div class="month">      
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>
-      December<br>
-      <span style="font-size:18px">2021</span>
+    <li onclick="changeMonth(this.className);" class="prev">&#10094;</li>
+    <li onclick="changeMonth(this.className);" class="next">&#10095;</li>
+    <li id="manad">
+      <span>december</span><br>
+      <span id="ar" style="font-size:18px">2021</span>
     </li>
   </ul>
 </div>
 
 <ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
+  <li>Må</li>
+  <li>Ti</li>
+  <li>On</li>
+  <li>To</li>
   <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
+  <li>Lö</li>
+  <li>Sö</li>
 </ul>
 
 <ul class="days">
+  <li></li>
+  <li></li>
   <li id="ett">1</li>
-  <li><span class="current">2</span></li>
+  <li>2</li>
   <li>3</li>
   <li>4</li>
   <li>5</li>
@@ -75,6 +71,7 @@
 
 <div class="event">
   <span onclick="stangFonster();">❌</span>
+  <h2>Event</h2>
   <div id="data"></div>
 </div>
 
