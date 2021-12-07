@@ -24,6 +24,7 @@ $hash = json_decode($data);
 
 $_SESSION["aid"] = $hash->aid;
 $_SESSION["hash"] = $hash->hash;
+$_SESSION["behorighet"] = $hash->behorighet;
 
 header('location: kalender.php');
  
@@ -33,10 +34,4 @@ header('location: kalender.php');
 else{
     echo "du måste fylla i alla värden";
 }
-
-
-
-
-
-
 ?>
