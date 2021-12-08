@@ -38,7 +38,6 @@ function hamtaEvents() {
 
 // lägger in månad/dag i array när man är på en månad med events
 function jelp() {
-    console.log(ajax.length);
     for(let i = 0; i < ajax[0].length; i++) {
 
         // månad som sträng
@@ -47,7 +46,6 @@ function jelp() {
 
         // om månad och år i kalendern är samma som månaden och året i ett event
         if($("#manad span").html() == dag.toLocaleString('default', { month: 'long' }) && $("#ar").html() == dag.getFullYear()) {
-            console.log("haha");
             manad[i] = dag.toLocaleString('default', { month: 'long' });
             dagar[i] = dag.getUTCDate();
             events();
