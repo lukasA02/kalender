@@ -1,0 +1,62 @@
+* {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-container a {
+    text-decoration: none;
+}
+
+.flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+}
+
+#svamp {
+    position: absolute;
+    width: 55vw;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: darkslategrey;
+    padding: 80px;
+    border-radius: 10px;
+    -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+}
+
+.inloggad {
+    margin: 1em;
+}
+
+.loggaut {
+    height: 3em;
+}
