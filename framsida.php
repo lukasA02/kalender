@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION["behorighet"];
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -15,12 +14,13 @@ echo $_SESSION["behorighet"];
     <link rel="stylesheet" href="framsidastil.css">
 </head>
 <body>
-    <h4 class="inloggad">Du är inloggad som: TheAdmin</h4>
+    <h4 class="inloggad">Du är inloggad som: <?php echo $_SESSION['anv']; ?></h4>
     <a href="loggaut.php"><button class="loggaut">Logga ut</button></a>
     <div id="svamp">
+        <span onclick="tillbaka();">&#8592;</span>
         <ul class="flex-container">
-            <li class="flex-item">Användare</li>
-            <li class="flex-item">Events</li>
+            <li class="flex-item" onclick="anvandare();">Användare</li>
+            <li class="flex-item" onclick="events();">Events</li>
             <a href="kalender.php"><li class="flex-item">Kalender</li></a>
         </ul>
     </div>

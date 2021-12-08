@@ -25,8 +25,9 @@ $hash = json_decode($data);
 $_SESSION["aid"] = $hash->aid;
 $_SESSION["hash"] = $hash->hash;
 $_SESSION["behorighet"] = $hash->behorighet;
+$_SESSION["anv"] = $anv;
 
-header('location: kalender.php');
+header('location: framsida.php');
  
 }
 
