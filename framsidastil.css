@@ -107,6 +107,7 @@ body {
 
 .loggaut button {
     height: 3em;
+    width: 7vw;
     border-radius: 8px;
     cursor: pointer;
     border: none;

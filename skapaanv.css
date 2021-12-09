@@ -18,7 +18,7 @@ body {
 }
 
 #container div label {
-    width: 20%;
+    width: 25%;
     padding-top: 1%;
     margin-right: 1%;
     color: whitesmoke;
@@ -32,8 +32,16 @@ body {
     padding: 1%;
 }
 
+#container div input[name='Telefon'] {
+    margin-bottom: 1em;
+}
+
 #container h1 {
     color: whitesmoke;
+}
+
+#container div select {
+    border-radius: 5px;
 }
 
 #idot {
@@ -69,4 +77,10 @@ body {
     top: 1em;
     left: 1em;
     color: whitesmoke;
+    text-decoration: none;
+}
+
+.tillbaka:hover {
+    opacity: 95%;
+    text-decoration: underline;
 }
