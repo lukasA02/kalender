@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: lightgrey;
+    background-color: rgb(62, 105, 105);
 }
 
 .flex-container {
@@ -36,6 +36,13 @@ body {
     -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
     -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    cursor: pointer;
+}
+
+.flex-item:hover {
+    -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.24);
 }
 
 #svamp {
@@ -55,8 +62,57 @@ body {
 
 .inloggad {
     margin: 1em;
+    color: whitesmoke;
+}
+
+.borta {
+    display: none;
+}
+
+#tillbaka {
+    position: absolute;
+    left: 2.5%;
+    top: 6%;
+    font-size: 32px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+#tillbaka:hover {
+    opacity: 90%;
+}
+
+#anv {
+    border: none;
+    z-index: 3213;
+}
+
+.text {
+    height: 3em;
+    width: 600px;
+    font-size: 12pt;
+}
+
+#submit {
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
 }
 
 .loggaut {
-    height: 3em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
 }
+
+.loggaut button {
+    height: 3em;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.loggaut:hover {
+    opacity: 90%;
+}
+

@@ -1,0 +1,72 @@
+* {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: rgb(47, 77, 77);
+}
+
+#container {
+    width: 100%;
+}
+
+#container div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+}
+
+#container div label {
+    width: 20%;
+    padding-top: 1%;
+    margin-right: 1%;
+    color: whitesmoke;
+}
+
+#container div input {
+    flex: 1;
+    height: 1.5em;
+    border-radius: 5px;
+    border: none;
+    padding: 1%;
+}
+
+#container h1 {
+    color: whitesmoke;
+}
+
+#idot {
+    color: black;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#idot:hover {
+    opacity: 90%;
+}
+
+.form {
+    position: absolute;
+    width: 50vw;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: darkslategrey;
+    padding: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+}
+
+.tillbaka {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: whitesmoke;
+}

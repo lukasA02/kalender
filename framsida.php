@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,21 +14,22 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="framsidastil.css">
 </head>
+
 <body>
     <h4 class="inloggad">Du är inloggad som: <?php echo $_SESSION['anv']; ?></h4>
-    <a href="loggaut.php"><button class="loggaut">Logga ut</button></a>
+    <a class="loggaut" href="loggaut.php"><button>Logga ut</button></a>
     <div id="svamp">
-        <span onclick="tillbaka();">&#8592;</span>
+        <span class="borta" onclick="tillbaka();" id="tillbaka">&#8592;</span>
         <ul class="flex-container">
             <li class="flex-item" onclick="anvandare();">Användare</li>
             <li class="flex-item" onclick="events();">Events</li>
-            <a href="kalender.php"><li class="flex-item">Kalender</li></a>
+            <a href="kalender.php">
+                <li class="flex-item">Kalender</li>
+            </a>
         </ul>
     </div>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-<script src="framsidaskript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="framsidaskript.js"></script>
 </body>
+
 </html>
