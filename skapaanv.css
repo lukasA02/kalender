@@ -5,6 +5,8 @@
 
 body {
     background-color: rgb(62, 105, 105);
+    margin: 0;
+    padding: 0;
 }
 
 #container {
@@ -70,6 +72,7 @@ body {
     -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
     -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    z-index: -1;
 }
 
 .tillbaka {
@@ -78,9 +81,45 @@ body {
     left: 1em;
     color: whitesmoke;
     text-decoration: none;
+    z-index: -1;
 }
 
 .tillbaka:hover {
     opacity: 95%;
     text-decoration: underline;
+}
+
+.fel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .33);
+    color: whitesmoke;
+}
+
+.fel div {
+    padding: 1em;
+    width: 33vw;
+    height: 33vh;
+    background-color: rgb(100, 148, 148);
+    border-radius: 10px;
+    -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.34);
+}
+
+#fel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#kryss {
+    float: right;
+    cursor: pointer;
+}
+
+#kryss:hover {
+    opacity: 69%;
 }

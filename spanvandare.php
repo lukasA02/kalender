@@ -23,8 +23,21 @@ curl_setopt($ch, CURLOPT_URL, $url);
 $data = curl_exec($ch);
 
 echo $data;
+print_r(json_decode($data));
 
+$idot = json_decode($data);
 
-
+if($idot == "Strong password.") {
+    $_SESSION['anvskapad'] = true;
+    unset($_SESSION['fel']);
+    header("Location: skapaanvandare.php");
+}
+else {
+    $_SESSION['fel'] = $idot;
+    header("Location: skapaanvandare.php");
+}
+}
+else {
+    $_SESSION['fel'] = 'Fyll i alla fält';
 }
 ?>
