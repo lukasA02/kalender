@@ -123,3 +123,23 @@ body {
 #kryss:hover {
     opacity: 69%;
 }
+
+.visalosen {
+    float: right;
+    position: relative;
+    margin-left: -26px;
+    margin-top: 1%;
+}
+
+#oga {
+    cursor: pointer;
+}
+
+#hur {
+    opacity: 0;
+    margin-right: -12px;
+}
+
+.idotidot {
+    margin-right: -2px;
+}

@@ -52,7 +52,6 @@ function jelp() {
             dagar[i] = dag.getUTCDate();
             events();
         }
-
     }
 }
 
