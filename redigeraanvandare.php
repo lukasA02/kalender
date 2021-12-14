@@ -26,7 +26,6 @@
                 <label for="Behorighet">Behörighet:</label>
                 <select name="Behorighet">
                     <option value="1">Admin</option>
-                    <option value="2">Åskådare</option>
                     <option value="3">Användare</option>
                 </select>
             </div>

@@ -9,8 +9,8 @@ function anvandare() {
     $(".flex-container").html("");
     $(".flex-container").append("<a href='skapaanvandare.php'><li class='flex-item'>Skapa användare</li></a>");
     $(".flex-container").append("<a href='redigeraanvandare.php'><li class='flex-item' style='font-size: 15px'>Redigera användare</li></a>");
-    $(".flex-container").append("<li class='flex-item'>Ta bort användare</li>");
-    $(".flex-container").append("<li class='flex-item'>Visa användare</li>");
+    $(".flex-container").append("<a href='tabortanvandare.php'><li class='flex-item'>Ta bort användare</li></a>");
+    $(".flex-container").append("<a href='visaanvandare.php'><li class='flex-item'>Visa användare</li></a>");
 }
 
 // sparar knappar och ersätter alla knappar med knappar relaterade till event

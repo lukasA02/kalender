@@ -15,8 +15,8 @@ if(isset($_GET['Tabort']) && isset($_GET['anvandareid'])){
     curl_setopt($ch, CURLOPT_URL, $url);
     $data = curl_exec($ch);
 
-     echo $data;
-     die();
+    echo $data;
+    die();
 
 }
 
