@@ -61,8 +61,8 @@ $data = $_SESSION['data'];
                 <input placeholder="Efternamn" name="Enamn" type="text">
             </div>
             <div>
-                <label for="Epost">Epost:</label>
-                <input placeholder="Epost" name="Epost" type="text">
+                <label for="Epost">E-post:</label>
+                <input placeholder="E-post" name="Epost" type="text">
             </div>
             <div>
                 <label for="Telefon">Telefonnummer:</label>
