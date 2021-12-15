@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ta bort event</title>
+    <title>Redigera event</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
@@ -19,20 +19,36 @@ session_start();
     <form action="redigeraev.php" method="GET">
         <div id="container">
             <div>
-                <h1>Ta bort event</h1>
+                <h1>Redigera event</h1>
             </div>
             <div>
                 <label for="EventID">EventID:</label>
                 <input placeholder="EventID" name="EventID" type="text">
             </div>
-                <input id="idot" name="Tabort" type="submit" value="Ta bort">
+            <div>
+                <label for="namn">Namn:</label>
+                <input placeholder="Namn" name="namn" type="text">
+            </div>
+            <div>
+                <label for="beskriv">Beskrivning:</label>
+                <input placeholder="Beskrivning" name="beskriv" type="text">
+            </div>
+            <div>
+                <label for="starttid">Starttid:</label>
+                <input placeholder="Starttid" name="starttid" type="datetime-local">
+            </div>
+            <div>
+                <label for="sluttid">Sluttid:</label>
+                <input placeholder="Sluttid" name="sluttid" type="datetime-local">
+            </div>
+                <input id="idot" type="submit" value="Redigera">
         </div>
     </form>
 </div>
 <div class="fel">
     <div>
         <span id="kryss" onclick="stangFonster();">❌</span>
-        <span id="fel">Event borttaget</span><br><br>
+        <span id="fel">Användare inbjuden</span><br><br>
         <span id="stortfel"></span>
     </div>
 </div>
