@@ -21,7 +21,7 @@ function events() {
     knappar = $(".flex-container").html();
     $(".flex-container").html("");
     $(".flex-container").append("<a href='skapaevent.php'><li class='flex-item'>Skapa event</li></a>");
-    $(".flex-container").append("<li class='flex-item'>Redigera event</li>");
+    $(".flex-container").append("<a href='redigeraevent.php'><li class='flex-item'>Redigera event</li></a>");
     $(".flex-container").append("<a href='tabortevent.php'><li class='flex-item'>Ta bort event</li></a>");
     $(".flex-container").append("<a href='bjudainevent.php'><li class='flex-item'>Bjud in till event</li></a>");
 }

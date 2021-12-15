@@ -16,7 +16,7 @@ session_start();
 </head>
 
 <body>
-    <h4 class="inloggad">Du är inloggad som: <?php echo $_SESSION['anv']; ?></h4>
+    <h4 class="inloggad"><?php if(isset($_SESSION['anv'])) echo 'Du är inloggad som: ' .  $_SESSION['anv']; else echo "Logga in"?></h4>
     <a class="loggaut" href="loggaut.php"><button>Logga ut</button></a>
     <div id="svamp">
         <span class="borta" onclick="tillbaka();" id="tillbaka">&#8592;</span>
