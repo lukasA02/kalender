@@ -1,3 +1,8 @@
+<?php
+session_start();
+$data = $_SESSION['data'];
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -20,7 +25,17 @@
             </div>
             <div>
                 <label for="anvandarid">AnvändarID:</label>
-                <input placeholder="AnvändarID" name="anvandarid" type="text">
+                <select name="anvandarid">
+                     <?php
+                      //lista alla anvandare och anvandarid, att få upp på den dropdown 
+                    foreach ($data as $row ) {
+                      //  print_r($row);
+                        echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. " , ".$row->Anvnamn. "</option>";
+                        //print_r($row->AnvandarID);
+                     }
+                     print_r($data);
+                       ?>
+                      </select>
             </div>
             <div>
                 <label for="Behorighet">Behörighet:</label>
