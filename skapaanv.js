@@ -49,11 +49,6 @@ function anvandareSkapad() {
     $('.fel').fadeIn();
 }
 
-function meddelande(txt) {
-    $('#fel').html(txt);
-    $('.fel').fadeIn();
-}
-
 $('.fel').hide();
 
 $(".fel").on("click", function(event){
