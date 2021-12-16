@@ -21,6 +21,7 @@ if(isset($_GET['namn'], $_GET['Agare'], $_GET['starttid'], $_GET['sluttid'], $_G
     $data = curl_exec($ch);
 
     $idot = json_decode($data);
+    echo $idot;
 
 }
 else {
