@@ -11,8 +11,6 @@ function hamtaEvents() {
         success: function (data) {
             // lagrar all data i en array
             ajax.push(data);
-            manad = Array();
-            dagar = Array();
             // skriver ut alla events i <p> och lägger bokade starttider i en array
             for(let i = 0; i < data.length; i++) {
                 // månad som sträng
