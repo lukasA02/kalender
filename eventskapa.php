@@ -1,12 +1,10 @@
 <?php
 session_start();
-if(isset($_SESSION['aid'], $_SESSION['hash'])) {
+
+if(isset($_GET['namn'], $_GET['Agare'], $_GET['starttid'], $_GET['sluttid'], $_GET['beskrivning'], $_SESSION['aid'], $_SESSION['hash'])){
+
     $aid = $_SESSION['aid'];
     $hash = $_SESSION['hash'];
-}
-
-if(isset($_GET['namn'], $_GET['Agare'], $_GET['starttid'], $_GET['sluttid'], $_GET['beskrivning'])){
-
     $namn = $_GET["namn"];
     $agare = $_GET["Agare"];
     $starttid = $_GET["starttid"];
@@ -22,7 +20,6 @@ if(isset($_GET['namn'], $_GET['Agare'], $_GET['starttid'], $_GET['sluttid'], $_G
 
     $idot = json_decode($data);
     echo $idot;
-
 }
 else {
     $_SESSION['fel'] = 'Fyll i alla fält';
