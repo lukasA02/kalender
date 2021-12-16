@@ -112,7 +112,7 @@ var curYear = year;
 function kalender() {
     var listItems = $(".days li");
     // loopar igenom alla <li>(dagar)
-    listItems.each(function(idx, li) {
+    listItems.each(function(li) {
         // kollar om dag/månad/år i kalendern stämmer överens med dagens datum
         if($(li).html() == day && $("#manad span").html() == strMonth && $("#ar").html() == curYear) {
             $(li).html("<span class='current'>" + $(li).html() + "</span>");
