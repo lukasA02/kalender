@@ -80,7 +80,7 @@ function oppnaDag(val) {
         var dg = a.getUTCDate();
         // lägger in allt i div med id: data
         if(val == dg) { // jämför datumet man klickar på med datumet från minkalender.php 
-            $('.event #data').html(ajax[0][i]);
+            // $('.event #data').html(ajax[0][i]); // visar bara ett event 🤔🤔
             $('.event #data').append("ID: " + ajax[0][i].ID + '<br>');
             $('.event #data').append("Namn: " + ajax[0][i].Namn + '<br>');
             $('.event #data').append("Beskrivning: " + ajax[0][i].beskrivning + '<br>');
@@ -96,6 +96,7 @@ function stangFonster() {
 }
 
 function oppnaFonster() {
+    $('.event #data').html('');
     $('.event').fadeIn();
 }
 
