@@ -18,13 +18,12 @@ if(isset($_GET['Tabort']) && isset($_GET['EventID'])){
 
 }
 
-if(isset($_GET['namn']) && isset($_GET['EventID']) && isset($_GET['beskriv']) && isset($_GET['starttid']) && isset($_GET['sluttid']) && !isset($_GET['Tabort'])){
+if(isset($_GET['Enamn']) && isset($_GET['EventID']) && isset($_GET['beskriv']) && isset($_GET['starttid']) && isset($_GET['sluttid']) && !isset($_GET['Tabort'])){
 
-    $en = $_GET['namn'];
-    $be = $_GET['beskriv'];
-    $stt = $_GET['starttid'];
-    $slt = $_GET['sluttid'];
-    $evid = $_GET['EventID'];
+    $en = $_GET['Enamn'];
+   $be = $_GET['beskriv'];
+   $stt = $_GET['starttid'];
+   $slt = $_GET['sluttid'];
 
 
   $url = 'https://tp2021.ntigskovde.se/Theprovider-main/event.php?aid='. $aid .'&hash='.$hash . '&evid='. $evid .
