@@ -59,6 +59,19 @@ body {
     opacity: 90%;
 }
 
+#idot2 {
+    color: black;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#idot2:hover {
+    opacity: 90%;
+}
+
 .form {
     position: absolute;
     width: 50vw;
