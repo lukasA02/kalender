@@ -1,5 +1,27 @@
 <?php
 session_start();
+
+$aid = $_SESSION['aid'];
+$hash = $_SESSION['hash'];
+
+$url= 'https://tp2021.ntigskovde.se/Theprovider-main/minkalender.php?aid='. $aid .'&hash='.$hash;
+$ch = curl_init();
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $url);
+$data = curl_exec($ch);
+
+$data = json_decode($data);
+$_SESSION['data'] = $data;
+
+$url= 'https://tp2021.ntigskovde.se/Theprovider-main/visaanvandare.php?aid='. $aid .'&hash='.$hash;
+$ch = curl_init();
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $url);
+$dataa = curl_exec($ch);
+
+$dataa = json_decode($dataa);
+$_SESSION['dataa'] = $dataa;
+//  print_r($data);
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -16,7 +38,7 @@ session_start();
 </head>
 
 <body>
-    <h4 class="inloggad"><?php if(isset($_SESSION['anv'])) echo 'Du är inloggad som: ' .  $_SESSION['anv']; else echo "Logga in"?></h4>
+    <h4 class="inloggad">Du är inloggad som: <?php echo $_SESSION['anv']; ?></h4>
     <a class="loggaut" href="loggaut.php"><button>Logga ut</button></a>
     <div id="svamp">
         <span class="borta" onclick="tillbaka();" id="tillbaka">&#8592;</span>
