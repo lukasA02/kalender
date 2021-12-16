@@ -197,3 +197,32 @@ input[type=submit]:hover {
   margin-right: auto;
   width: 90vw;
 }
+
+/* haha */
+#anvn {
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+}
+
+#losn {
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+}
+
+#login input {
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 12px 12px 25px 0px rgba(0, 0, 0, 0.14);
+}
+
+#login input:hover {
+  opacity: 95%;
+}
