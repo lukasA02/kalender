@@ -31,7 +31,7 @@ session_start();
                 <label for="Agare">Ägare:</label>
                 <select name="Agare">
                      <?php
-                     $data = $_SESSION['data'];
+                     $data = $_SESSION['dataa'];
                       //lista alla anvandare och anvandarid, att få upp på den dropdown 
                     foreach ($data as $row ) {
                         echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
