@@ -9,7 +9,6 @@
 </head>
 <body onload="hamtaEvents();">
 
-<p></p>
 <div id="kalender">
 <div class="month">      
   <ul>
