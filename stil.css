@@ -131,6 +131,11 @@ body {
 .input {
   height: 2rem;
   width: 18vw;
+  padding-left: 2.5%;
+}
+
+.input:focus {
+  outline: none;
 }
 
 #login {
@@ -226,3 +231,4 @@ input[type=submit]:hover {
 #login input:hover {
   opacity: 95%;
 }
+
