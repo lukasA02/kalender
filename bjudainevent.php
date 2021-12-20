@@ -26,30 +26,24 @@ $data = $_SESSION['data'];
             <div>
                 <label for="anvandarid">AnvändarID:</label>
                 <select name="anvandarid">
-                     <?php
-                      //lista alla anvandare och anvandarid, att få upp på den dropdown 
-                    foreach ($anvid as $row ) {
-                      //print_r($row);
-                        echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
-                        //print_r($row->AnvandarID);
-                     }
-                     print_r($anvid);
-                       ?>
-                      </select>
+                  <?php
+                  //lista alla anvandare och anvandarid, att få upp på den dropdown 
+                  foreach ($anvid as $row ) {
+                    echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
+                  }
+                  ?>
+                </select>
             </div>
             <div>
                 <label for="EventID">EventID:</label>
                 <select name="EventID">
-                     <?php
-                      //lista alla anvandare och anvandarid, att få upp på den dropdown 
-                    foreach ($data as $row ) {
-                      // print_r($row);
-                        echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
-                        //print_r($data);
-                     }
-                     print_r($data);
-                       ?>
-                      </select>
+                  <?php
+                  //lista alla anvandare och anvandarid, att få upp på den dropdown 
+                  foreach ($data as $row ) {
+                    echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
+                  }
+                  ?>
+                </select>
             </div>
                 <input id="idot" type="submit" value="Bjud in">
         </div>
