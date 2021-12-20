@@ -30,7 +30,7 @@ $data = $_SESSION['data'];
                       //lista alla anvandare och anvandarid, att få upp på den dropdown 
                     foreach ($anvid as $row ) {
                       //print_r($row);
-                        echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. " , ".$row->Anvnamn. "</option>";
+                        echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
                         //print_r($row->AnvandarID);
                      }
                      print_r($anvid);
@@ -44,7 +44,7 @@ $data = $_SESSION['data'];
                       //lista alla anvandare och anvandarid, att få upp på den dropdown 
                     foreach ($data as $row ) {
                       // print_r($row);
-                        echo "<option value=". $row->ID."> ". $row->ID. " , ".$row->Namn. "</option>";
+                        echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
                         //print_r($data);
                      }
                      print_r($data);
