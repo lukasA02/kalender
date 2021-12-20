@@ -167,6 +167,7 @@ body {
     cursor: pointer;
     bottom: 45%;
     left: 95%;
+    user-select: none;
 }
 
 #vansterpil {
@@ -175,6 +176,7 @@ body {
     cursor: pointer;
     bottom: 45%;
     right: 95%;
+    user-select: none;
 }
 
 #hogerpil:hover {
