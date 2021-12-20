@@ -1,6 +1,7 @@
 <?php
 session_start();
-$data = $_SESSION['dataa'];
+if(isset($_SESSION['dataa']))
+    $data = $_SESSION['dataa'];
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +28,11 @@ $data = $_SESSION['dataa'];
                 <label for="anvandarid">AnvändarID:</label>
                 <select name="anvandarid">
                     <?php
-                    //lista alla anvandare och anvandarid, att få upp på den dropdown 
-                    foreach ($data as $row ) {
-                        echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
+                    if(isset($data)) {
+                        //lista alla anvandare och anvandarid, att få upp på den dropdown 
+                        foreach ($data as $row ) {
+                            echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
+                        }
                     }
                     ?>
                 </select>
