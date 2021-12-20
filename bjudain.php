@@ -1,7 +1,9 @@
 <?php 
 session_start();
-$aid = $_SESSION['aid'];
-$hash = $_SESSION['hash'];
+if(isset($_SESSION['aid'], $_SESSION['hash'])) {
+    $aid = $_SESSION['aid'];
+    $hash = $_SESSION['hash'];    
+}
 
 if(isset($_GET['anvandarid']) && isset($_GET['EventID'])){
 

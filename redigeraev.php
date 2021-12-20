@@ -1,9 +1,10 @@
 <?php
 session_start();
-$aid = $_SESSION['aid'];
-$hash = $_SESSION['hash'];
-$evid = $_GET['EventID'];
-
+if(isset($_SESSION['aid'], $_SESSION['hash'], $_GET['EventID'])) {
+    $aid = $_SESSION['aid'];
+    $hash = $_SESSION['hash'];
+    $evid = $_GET['EventID'];    
+}
 
 if(isset($_GET['Tabort']) && isset($_GET['EventID'])){
 
