@@ -29,7 +29,7 @@ $data = $_SESSION['data'];
                       //lista alla anvandare och anvandarid, att få upp på den dropdown 
                     foreach ($data as $row ) {
                       // print_r($row);
-                        echo "<option value=". $row->ID."> ". $row->ID. " , ".$row->Namn. "</option>";
+                        echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
                         //print_r($data);
                      }
                      print_r($data);
@@ -59,7 +59,7 @@ $data = $_SESSION['data'];
 <div class="fel">
     <div>
         <span id="kryss" onclick="stangFonster();">❌</span>
-        <span id="fel">Användare inbjuden</span><br><br>
+        <span id="fel"></span><br><br>
         <span id="stortfel"></span>
     </div>
 </div>
