@@ -25,16 +25,13 @@ $data = $_SESSION['data'];
             <div>
                 <label for="EventID">EventID:</label>
                 <select name="EventID">
-                     <?php
-                      //lista alla anvandare och anvandarid, att få upp på den dropdown 
+                    <?php
+                    //lista alla anvandare och anvandarid, att få upp på den dropdown 
                     foreach ($data as $row ) {
-                      // print_r($row);
                         echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
-                        //print_r($data);
-                     }
-                     print_r($data);
-                       ?>
-                      </select>
+                    }
+                    ?>
+                </select>
             </div>
             <div>
                 <label for="namn">Namn:</label>
