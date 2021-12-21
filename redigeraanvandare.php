@@ -28,20 +28,17 @@ if(isset($_SESSION['dataa']))
                 <label for="anvandarid">AnvändarID:</label>
                 <select name="anvandarid">
                     <?php
-                    if(isset($data)) {
+                    if(isset($data, $_SESSION['behorighet'])) {
+                        if($_SESSION['behorighet'] == 1) {
                         //lista alla anvandare och anvandarid, att få upp på den dropdown 
                         foreach ($data as $row ) {
                             echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
                         }
                     }
+                        if($_SESSION['behorighet'] == 3)
+                            echo "<option value='" . $_SESSION['aid'] . "'>" . $_SESSION['aid'] . "</option>";
+                    }
                     ?>
-                </select>
-            </div>
-            <div>
-                <label for="Behorighet">Behörighet:</label>
-                <select name="Behorighet">
-                    <option value="1">Admin</option>
-                    <option value="3">Användare</option>
                 </select>
             </div>
             <div>
