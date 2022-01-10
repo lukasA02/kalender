@@ -15,8 +15,8 @@
     <li onclick="changeMonth(this.className);" class="prev">&#10094;</li>
     <li onclick="changeMonth(this.className);" class="next">&#10095;</li>
     <li id="manad">
-      <span>december</span><br>
-      <span id="ar" style="font-size:18px">2021</span>
+      <span>januari</span><br>
+      <span id="ar" style="font-size:18px">2022</span>
     </li>
   </ul>
 </div>
@@ -33,8 +33,11 @@
 
 <ul class="days">
   <li></li>
+  <li></li>  
   <li></li>
-  <li id="ett">1</li>
+  <li></li>
+  <li></li>
+  <li>1</li>
   <li>2</li>
   <li>3</li>
   <li>4</li>
