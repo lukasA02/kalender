@@ -23,7 +23,18 @@ if(isset($_SESSION['aid'], $_SESSION['hash'])) {
     $dataa = json_decode($dataa);
     $_SESSION['dataa'] = $dataa;
     //  print_r($data);
+
+    $url= 'https://tp2021.ntigskovde.se/Theprovider-main/visarn.php?aid='. $aid .'&hash='.$hash;
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $data2 = curl_exec($ch);
+
+    
+    $_SESSION['data2'] = $data2;
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="sv">
