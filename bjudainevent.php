@@ -43,12 +43,20 @@ if(isset($_SESSION['data2'])){
                 <label for="anvandarid">AnvändarID:</label>
                 <select name="anvandarid">
                     <?php
-                    if(isset($anvid)) {
+                     if(isset($anvid, $_SESSION['behorighet'])) {
+                        if($_SESSION['behorighet'] == 1) {
                         //lista alla anvandare och anvandarid, att få upp på den dropdown 
                         foreach ($anvid as $row ) {
                             echo "<option value=". $row->AnvandarID."> ". $row->AnvandarID. ", ".$row->Anvnamn. "</option>";
                         }
                     }
+                }
+                if(isset($_SESSION['behorighet'])) {
+                    if($_SESSION['behorighet'] == 3) {
+                        echo "<option value='" . $_SESSION['aid'] . "'>" . $_SESSION['aid'] . "</option>";
+                    }
+                }
+            
                     ?>
                 </select>
             </div>
@@ -64,9 +72,6 @@ if(isset($_SESSION['data2'])){
                         }
                     }
                     }
-                    else{
-                        die;
-                    }
                     if(isset($data21, $_SESSION['behorighet'])) {
                         if($_SESSION['behorighet'] == 3) {
                         //lista alla anvandare och anvandarid, att få upp på den dropdown 
@@ -74,9 +79,6 @@ if(isset($_SESSION['data2'])){
                             echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
                         }
                     }
-                    }
-                    else{
-                        die;
                     }
                     ?>
                 </select>

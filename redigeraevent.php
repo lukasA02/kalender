@@ -52,9 +52,6 @@ if(isset($_SESSION['data'])){
                         }
                     }
                     }
-                    else{
-                        die;
-                    }
                     if(isset($data21, $_SESSION['behorighet'])) {
                         if($_SESSION['behorighet'] == 3) {
                         //lista alla anvandare och anvandarid, att få upp på den dropdown 
@@ -62,9 +59,6 @@ if(isset($_SESSION['data'])){
                             echo "<option value=". $row->ID."> ". $row->ID. ", ".$row->Namn. "</option>";
                         }
                     }
-                    }
-                    else{
-                        die;
                     }
                     ?>
                 </select>
