@@ -19,9 +19,9 @@ if(isset($_GET['Tabort']) && isset($_GET['EventID'])){
 
 }
 
-if(isset($_GET['Enamn']) && isset($_GET['EventID']) && isset($_GET['beskriv']) && isset($_GET['starttid']) && isset($_GET['sluttid']) && !isset($_GET['Tabort'])){
+if(isset($_GET['namn']) && isset($_GET['EventID']) && isset($_GET['beskriv']) && isset($_GET['starttid']) && isset($_GET['sluttid']) && !isset($_GET['Tabort'])){
 
-    $en = $_GET['Enamn'];
+    $en = $_GET['namn'];
    $be = $_GET['beskriv'];
    $stt = $_GET['starttid'];
    $slt = $_GET['sluttid'];
