@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if(isset($_GET['user']) && isset($_GET['pass'])){
-$anv = $_GET['user'];
-$losen  = $_GET['pass'];
+if(isset($_POST['user']) && isset($_POST['pass'])){
+$anv = $_POST['user'];
+$losen  = $_POST['pass'];
 
 
 $url = 'http://tp2021.ntigskovde.se/Theprovider-main/behorighet.php?anv='.$anv.'&losen='.$losen;
