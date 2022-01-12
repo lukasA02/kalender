@@ -1,7 +1,6 @@
 var dagar = Array();
 var manad = Array();
 var ajax = [];
-
 // hämtar events från events.php där hash och aid finns sparat i session
 function hamtaEvents() {
     $.ajax('events.php', {
@@ -127,13 +126,15 @@ function emptyListItem(num) {
     }
 }
 
-// ?????????????????????????????
-if(strMonth == "januari")
+if($("#manad :first-child").html() == "januari" || $("#manad :first-child").html() == "January")
     month = 2;
 
 var t = 0;
+
 // in: className från pilen man trycker på
 function changeMonth(dir) {
+
+    console.log($("#manad :first-child").html());
 
     // tar fram antal dagar i nuvarande månad
     var dagar = daysInMonth(month - t, curYear);
@@ -158,6 +159,11 @@ function changeMonth(dir) {
 
     // ändrar år
     $("#ar").html(aaa.getFullYear());
+
+    // clownkod
+    if($("#manad :first-child").html() == "december" || $("#manad :first-child").html() == "December")
+        if($("#manad :nth-child(3)").html() == "2021")
+            dagar = 31;
 
     // tömmer kalendern på dagar
     $(".days").html("");
@@ -192,4 +198,6 @@ function changeMonth(dir) {
     }
     jelp();
     kalender();
+    console.log($("#manad :first-child").html());
+
 }
