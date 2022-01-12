@@ -46,10 +46,6 @@ if(isset($_SESSION['dataa']))
                 <input placeholder="Användarnamn" name="Anvnamn" type="text">
             </div>
             <div>
-                <label for="Losen">Lösenord:</label>
-                <input placeholder="Lösenord" id="losen" name="Losen" type="password">
-            </div>
-            <div>
                 <label for="Fnamn">Förnamn:</label>
                 <input placeholder="Förnamn" name="Fnamn" type="text">
             </div>
