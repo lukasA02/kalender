@@ -61,8 +61,10 @@ body {
 }
 
 .inloggad {
+    position: absolute;
     margin: 1em;
     color: whitesmoke;
+    z-index: 69;
 }
 
 .borta {
@@ -76,6 +78,7 @@ body {
     font-size: 32px;
     cursor: pointer;
     color: whitesmoke;
+    z-index: 420;
 }
 
 #tillbaka:hover {
@@ -103,6 +106,7 @@ body {
     position: absolute;
     top: 1em;
     right: 1em;
+    z-index: 69;
 }
 
 .loggaut button {
