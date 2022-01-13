@@ -31,18 +31,23 @@ function anvandare() {
 function events() {
     // visa tillbakaknappen
     $("#tillbaka").removeClass("borta");
-
+console.log(behorighet);
     // spara alla knappar
     knappar = $(".flex-container").html();
     // ta bort alla knappar
     $(".flex-container").html("");
-    if(behorighet != "") { // någon är inloggad
+    if(behorighet == 1) { // admin är inloggad
         $(".flex-container").append("<a href='skapaevent.php'><li class='flex-item'>Skapa event</li></a>");
         $(".flex-container").append("<a href='redigeraevent.php'><li class='flex-item'>Redigera event</li></a>");
         $(".flex-container").append("<a href='tabortevent.php'><li class='flex-item'>Ta bort event</li></a>");
         $(".flex-container").append("<a href='bjudainevent.php'><li class='flex-item'>Bjud in till event</li></a>");
     }
-    else // ingen är inloggad
+    if(behorighet == 3) {
+        $(".flex-container").append("<a href='skapaevent.php'><li class='flex-item'>Skapa event</li></a>");
+        $(".flex-container").append("<a href='redigeraevent.php'><li class='flex-item'>Redigera event</li></a>");
+        $(".flex-container").append("<a href='tabortevent.php'><li class='flex-item'>Ta bort event</li></a>");
+    }
+    if(behorighet == "") // ingen är inloggad
         $(".flex-container").append("<a href='index.html'><li class='flex-item' style='font-size: 15px'>Logga in</li></a>");
 }
 
